@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" template="/WEB-INF/templates/mainTemplate.xhtml">
+        <ui:define name="mainTemplateContent">
+
+            <h3 class="title">#{messages.ExperienceRecruiteryTitle}</h3>
+            <p:panel styleClass="content_panel">
+            <h:outputText value=" #{messages.ExperienceRecruiteryDetail}" />
+
+            <ul>
+                <li class="li_square"><h:outputText styleClass="bold" value="#{messages.ExperienceRecruiteryDate3}:" />
+                    <h:outputText value=" #{messages.ExperienceRecruiteryDetail3}" />
+                </li>
+                <li class="li_square"><h:outputText styleClass="bold" value="#{messages.ExperienceRecruiteryDate2}:" />
+                    <h:outputText value=" #{messages.ExperienceRecruiteryDetail2}" />
+                </li>
+                <li class="li_square"><h:outputText styleClass="bold" value="#{messages.ExperienceRecruiteryDate1}:" />
+                    <h:outputText value=" #{messages.ExperienceRecruiteryDetail1}" />
+                </li>
+            </ul>
+            </p:panel>
+            
+            <h3 class="title">#{messages.ExperienceKnowledges}</h3>
+            <p:panel styleClass="content_panel">
+            <p:panelGrid columns="3" layout="grid">   
+                <p:outputPanel styleClass="text_align_center width100">
+                    <h:outputText styleClass="title bold" value=" #{messages.ExperienceHighLevel}" />
+                </p:outputPanel>
+                <p:outputPanel styleClass="text_align_center width100">
+                    <h:outputText styleClass="title bold" value=" #{messages.ExperienceMediumLevel}" />
+                </p:outputPanel>
+                <p:outputPanel styleClass="text_align_center width100">
+                    <h:outputText styleClass="title bold" value=" #{messages.ExperienceLowLevel}" />
+                </p:outputPanel>
+
+                <p:tagCloud styleClass="width100" model="#{infoBean.highLevel}"></p:tagCloud>       
+                <p:tagCloud styleClass="width100" model="#{infoBean.mediumLevel}"></p:tagCloud>               
+                <p:tagCloud styleClass="width100" model="#{infoBean.lowLevel}"></p:tagCloud>
+            </p:panelGrid>
+            </p:panel>
+
+        </ui:define>
+    </ui:composition>
+</html>

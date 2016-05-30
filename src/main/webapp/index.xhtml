@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" template="/WEB-INF/templates/mainTemplate.xhtml">
+        <ui:define name="mainTemplateContent">
+
+            <p:panel styleClass="content_panel">
+                <p:outputPanel styleClass="inline_block vertical_top home_picture">
+                    <p:graphicImage value="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/000/2ca/0b4/3dedbd0.jpg" />
+                </p:outputPanel>
+                <p:outputPanel styleClass="inline_block vertical_top home_info">
+                    <h2 class="bold block home_info_title">#{messages.Title}</h2>
+                    <h3 class="block home_info_title">#{messages.HomeDescription1}</h3>
+                    
+                    <p:outputPanel styleClass="block">
+                        <h:outputLink id="email_link" styleClass="inline_block icon_link" target="_blank" value="mailto:misabelcardes@gmail.com">                        
+                            <p:graphicImage styleClass="icon_img inline_block" library="icons" name="email.png" />
+                        </h:outputLink>
+                        <p:tooltip for="email_link" value="misabelcardes@gmail.com" />
+                        <h:outputLink styleClass="inline_block icon_link" target="_blank" value="https://es.linkedin.com/in/misabelcarde">
+                            <p:graphicImage styleClass="icon_img inline_block" library="icons" name="linkedin.png" />
+                        </h:outputLink>
+                        <h:outputLink styleClass="inline_block icon_link" target="_blank" value="https://twitter.com/MIsabelCarde">
+                            <p:graphicImage styleClass="icon_img inline_block" library="icons" name="twitter.png" />
+                        </h:outputLink>
+                    </p:outputPanel>
+                    
+                    <h:form>
+                        <p:commandButton value="#{messages.DownloadCV}" styleClass="download_button" ajax="false" icon="ui-icon-arrowthick-1-s">
+                            <p:fileDownload value="#{infoBean.cvFile}" />
+                        </p:commandButton>
+                    </h:form>
+                </p:outputPanel>
+            </p:panel>
+
+        </ui:define>
+    </ui:composition>
+</html>

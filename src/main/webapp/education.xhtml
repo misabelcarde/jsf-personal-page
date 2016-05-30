@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" template="/WEB-INF/templates/mainTemplate.xhtml">
+        <ui:define name="mainTemplateContent">
+
+            <h3 class="title">#{messages.EducationTypeUniversity}</h3>
+            <p:panel styleClass="content_panel">
+                <ul>
+                    <li class="li_square"><h:outputText styleClass="bold block" value="#{messages.EducationUniversityDate2}, #{messages.EducationUniversityTitle2}" />
+                        <h:outputText value="#{messages.EducationUniversityDetail2}" />
+                    </li>
+                    <li class="li_square"><h:outputText styleClass="bold block" value="#{messages.EducationUniversityDate1}, #{messages.EducationUniversityTitle1}" />
+                        <h:outputText value="#{messages.EducationUniversityDetail1}" />
+                    </li>
+                </ul>
+            </p:panel>
+
+            <h3 class="title">#{messages.EducationTypeCourse}</h3>
+            <p:panel styleClass="content_panel">
+                <ul>
+                    <li class="li_square"><h:outputText styleClass="bold block" value="#{messages.EducationCourseDate4}: #{messages.EducationCourseTitle4}" />
+                        <h:outputText value="#{messages.EducationCourseInstructor4}" />
+                    </li>
+                    <li class="li_square"><h:outputText styleClass="bold block" value="#{messages.EducationCourseDate3}: #{messages.EducationCourseTitle3}" />
+                        <h:outputText value="#{messages.EducationCourseInstructor3}" />
+                    </li>
+                    <li class="li_square"><h:outputText styleClass="bold block" value="#{messages.EducationCourseDate2}: #{messages.EducationCourseTitle2}" />
+                        <h:outputText value="#{messages.EducationCourseInstructor2}" />
+                    </li>
+                    <li class="li_square"><h:outputText styleClass="bold block" value="#{messages.EducationCourseDate1}: #{messages.EducationCourseTitle1}" />
+                        <h:outputText value="#{messages.EducationCourseInstructor1}" />
+                    </li>
+                </ul>
+            </p:panel>
+
+        </ui:define>
+    </ui:composition>
+</html>
