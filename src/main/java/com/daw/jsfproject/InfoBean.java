@@ -3,7 +3,7 @@ package com.daw.jsfproject;
 import java.io.InputStream;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.ApplicationScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import org.primefaces.model.DefaultStreamedContent;
@@ -17,7 +17,7 @@ import org.primefaces.model.tagcloud.TagCloudModel;
  * @author MIsabelCarde
  */
 @Named
-@SessionScoped
+@ApplicationScoped
 public class InfoBean implements Serializable {
     
     private TagCloudModel highLevel;
